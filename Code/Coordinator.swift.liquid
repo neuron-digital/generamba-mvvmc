@@ -1,0 +1,36 @@
+//
+//  {{ module_info.name }} module - {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+
+final class {{ module_info.name }}Coordinator {
+
+    // MARK: - Properties
+    private weak var navigationController: UINavigationController?
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Init
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+
+    func start() {
+        show{{ module_info.name }}Screen()
+    }
+
+    // MARK: - Private implementation
+    private func show{{ module_info.name }}Screen() {
+        if let  {{ module_info.name }}VC = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}") as? {{ module_info.name }}ViewController {
+            // setup bindings
+            {{ module_info.name }}VC = {{ module_info.name }}ViewModel()
+
+            navigationController?.pushViewController({{ module_info.name }}VC, animated: false)
+        }
+    }
+}

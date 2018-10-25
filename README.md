@@ -6,13 +6,13 @@ It's Swift MVVM+Coordinator template for [Generamba](https://github.com/rambler-
 
 #### MVVM-C
 Modules: ViewController (View), ViewModel, Coordinator
-- [mvvmc](https://github.com/neuron-digital/generamba-mvvmc/blob/master/mvvm-c/mvvmc.rambaspec)
+- [mvvmc](https://github.com/neuron-digital/generamba-mvvmc/blob/master/mvvmc.rambaspec)
 
 ```generamba gen module_name mvvmc --module_path "project_folder/Modules"```
 
 #### Model-Service
 Models: Model, Service
-- [model-service](https://github.com/neuron-digital/generamba-mvvmc/blob/master/model-service/model-service.rambaspec)
+- [model-service](https://github.com/neuron-digital/generamba-mvvmc/blob/master/model-service.rambaspec)
 
 ```generamba gen module_name model-service --module_path "project_folder/Models"```
 

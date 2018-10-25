@@ -10,10 +10,10 @@ license: "MIT"
 code_files:
 
 # View layer
-- {name: Views/ViewController.swift, path: mvvmc/Code/View/ViewController.swift.liquid}
+- {name: Views/ViewController.swift, path: mvvm-c/Code/View/ViewController.swift.liquid}
 
 # ViewModel layer
-- {name: ViewModels/ViewModel.swift, path: mvvmc/Code/ViewModel/ViewModel.swift.liquid}
+- {name: ViewModels/ViewModel.swift, path: mvvm-c/Code/ViewModel/ViewModel.swift.liquid}
 
 # Coordinator layer
-- {name: Coordinator.swift, path: mvvmc/Code/Coordinator.swift.liquid}
+- {name: Coordinator.swift, path: mvvm-c/Code/Coordinator.swift.liquid}

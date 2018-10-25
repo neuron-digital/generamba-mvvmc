@@ -28,7 +28,7 @@ final class {{ module_info.name }}Coordinator {
     private func show{{ module_info.name }}Screen() {
         if let  {{ module_info.name }}VC = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}") as? {{ module_info.name }}ViewController {
             // setup bindings
-            {{ module_info.name }}VC = {{ module_info.name }}ViewModel()
+            {{ module_info.name }}VC.viewModel = {{ module_info.name }}ViewModel()
 
             navigationController?.pushViewController({{ module_info.name }}VC, animated: false)
         }

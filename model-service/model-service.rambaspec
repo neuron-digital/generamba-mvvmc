@@ -1,0 +1,16 @@
+# Template information section
+name: "model-service"
+summary: "Model-Service template."
+author: "Dmitry Shliugaev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# Model layer
+- {name: Model.swift, path: Code/Model.swift.liquid}
+
+# Service layer
+- {name: Service.swift, path: Code/Service.swift.liquid}

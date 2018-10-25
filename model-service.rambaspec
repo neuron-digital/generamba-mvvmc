@@ -10,7 +10,7 @@ license: "MIT"
 code_files:
 
 # Model layer
-- {name: Model.swift, path: Code/Model.swift.liquid}
+- {name: Model.swift, path: model-service/Code/Model.swift.liquid}
 
 # Service layer
-- {name: Service.swift, path: Code/Service.swift.liquid}
+- {name: Service.swift, path: model-service/Code/Service.swift.liquid}

@@ -9,14 +9,15 @@
 import UIKit
 import RxSwift
 
-final class {{ module_info.name }}Coordinator {
+final class {{ module_info.name }}Coordinator: Coordinator {
 
     // MARK: - Properties
     private weak var navigationController: UINavigationController?
     private let disposeBag = DisposeBag()
 
     // MARK: - Init
-    init(navigationController: UINavigationController) {
+    init(window: UIWindow, navigationController: UINavigationController) {
+        super.init(window: window)
         self.navigationController = navigationController
     }
 

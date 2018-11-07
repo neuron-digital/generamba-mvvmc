@@ -16,7 +16,6 @@ final class {{ module_info.name }}Coordinator: Coordinator {
 
     // MARK: - Properties
     private var navigationController: UINavigationController
-    private let storyboard = UIStoryboard(name: "{{ module_info.name }}", bundle: nil)
     private let disposeBag = DisposeBag()
 
     // MARK: - Init
@@ -30,7 +29,7 @@ final class {{ module_info.name }}Coordinator: Coordinator {
 
     // MARK: - Private implementation
     private func show{{ module_info.name }}Screen() {
-        if let  {{ module_info.name }}VC = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}ViewController") as? {{ module_info.name }}ViewController {
+        if let {{ module_info.name }}VC = ViewControllerFactory.get{{ module_info.name }}VC {
             // setup bindings
             {{ module_info.name }}VC.viewModel = {{ module_info.name }}ViewModel()
 

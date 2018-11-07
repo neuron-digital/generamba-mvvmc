@@ -10,14 +10,17 @@ import UIKit
 import RxSwift
 
 final class {{ module_info.name }}Coordinator: Coordinator {
+    var rootViewController: UIViewController {
+        return self.navigationController
+    }
 
     // MARK: - Properties
-    private weak var navigationController: UINavigationController?
+    private var navigationController: UINavigationController
+    private let storyboard = UIStoryboard(name: "{{ module_info.name }}", bundle: nil)
     private let disposeBag = DisposeBag()
 
     // MARK: - Init
-    init(window: UIWindow, navigationController: UINavigationController) {
-        super.init(window: window)
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
@@ -27,11 +30,11 @@ final class {{ module_info.name }}Coordinator: Coordinator {
 
     // MARK: - Private implementation
     private func show{{ module_info.name }}Screen() {
-        if let  {{ module_info.name }}VC = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}") as? {{ module_info.name }}ViewController {
+        if let  {{ module_info.name }}VC = storyboard.instantiateViewController(withIdentifier: "{{ module_info.name }}ViewController") as? {{ module_info.name }}ViewController {
             // setup bindings
             {{ module_info.name }}VC.viewModel = {{ module_info.name }}ViewModel()
 
-            navigationController?.pushViewController({{ module_info.name }}VC, animated: false)
+            navigationController.pushViewController({{ module_info.name }}VC, animated: false)
         }
     }
 }
